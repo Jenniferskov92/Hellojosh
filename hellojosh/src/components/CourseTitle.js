@@ -38,7 +38,7 @@ const CourseTitle = ({ logo, title, teacher }) => {
     return (
         <article css={style}>
             <figure>
-                <FontAwesomeIcon icon={["fab", `${logo}`]} size="3x" spin/>
+                <FontAwesomeIcon icon={["fab", `${logo}`]} size="3x" />
             </figure>
             <h3>{title}</h3>
             <p>by {teacher}</p>
