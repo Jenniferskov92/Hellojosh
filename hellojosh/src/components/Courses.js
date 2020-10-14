@@ -5,13 +5,16 @@ import { Router, Link } from "@reach/router";
 import CourseLink from "./CourseLink";
 import CourseList from "./CourseList";
 
-const Courses = ({ courselist }) => {
+const Courses = () => {
+    const styleHeadLine = css`
+        margin: 0;
+    `;
     return (
         <div>
-            <h2>Courses</h2>
+            <h2 css={styleHeadLine}>Courses</h2>
 
             <nav>
-                <CourseLink to="./"> All Courses </CourseLink>
+                <CourseLink to="./">All Courses </CourseLink>
                 <CourseLink to="newest">Newest</CourseLink>{" "}
                 <CourseLink to="top">Top rated</CourseLink>
                 <CourseLink to="popular">Most popular</CourseLink>
