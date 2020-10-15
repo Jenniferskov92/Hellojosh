@@ -7,6 +7,7 @@ import Course from "../components/Course";
 import Notification from "../components/Notification";
 import Hello from "../components/Hello";
 import Premium from "../components/Premium";
+import RenderLineChart from "../components/RenderLineChart";
 
 const Testview = () => {
     const [msg, setMsg] = useState(1);
@@ -22,6 +23,10 @@ const Testview = () => {
             <br />
             <br />
             <Hello firstname="Josh" />
+            <br />
+            <br />
+            <br />
+            <RenderLineChart />
             <br />
             <br />
             <br />

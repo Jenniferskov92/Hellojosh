@@ -4,8 +4,9 @@ import { css, jsx } from "@emotion/core";
 import Button from "./Button";
 import CourseTitle from "./CourseTitle";
 import Detail from "./Detail";
+import Completion from "./Completion";
 
-const Course = ({ logo, title, teacher, duration, rating }) => {
+const Course = ({ logo, title, teacher, duration, rating, completion }) => {
     const style = css`
         height: 5em;
         background-color: #f5f5f7;
@@ -19,9 +20,10 @@ const Course = ({ logo, title, teacher, duration, rating }) => {
     return (
         <div css={style}>
             <CourseTitle logo={logo} title={title} teacher={teacher} />
-            <Detail icon="clock" detail={duration} />
-            <Detail icon="fire" detail={rating} />
-            <Button txt="View course" />
+            {duration && <Detail icon="clock" detail={duration} />}
+            {rating && <Detail icon="fire" detail={rating} />}
+            {completion && <Completion percentage={completion} />}
+            <Button txt={completion ? "Continue" : "View course"} />
         </div>
     );
 };
